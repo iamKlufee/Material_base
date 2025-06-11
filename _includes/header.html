@@ -1,11 +1,11 @@
-<header class="bg-dark text-white py-3">
-    <div class="container d-flex justify-content-between align-items-center">
-        <h1 class="h3 mb-0"><a href="{{ '/' | relative_url }}" class="text-white text-decoration-none">{{ site.title }}</a></h1>
-        <nav>
+<header class="site-header">
+    <div class="container">
+        <h1 class="site-title mb-0"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+        <nav class="main-nav">
             <ul class="nav">
-                <li class="nav-item"><a class="nav-link text-white" href="{{ '/vectors/' | relative_url }}">矢量图</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="{{ '/3d_models/' | relative_url }}">3D模型</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="{{ '/about.html' | relative_url }}">关于我们</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ '/vectors/' | relative_url }}">Vectors</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ '/3d_models/' | relative_url }}">3D Models</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ '/about.html' | relative_url }}">About Us</a></li>
             </ul>
         </nav>
     </div>

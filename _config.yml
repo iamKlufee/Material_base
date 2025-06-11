@@ -1,55 +1,37 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
+title: Research Resources Hub # 网站标题
+email: your-email@example.com # 你的联系邮箱
+description: >- # 网站描述，更专业化
+  A curated collection of free vector graphics and 3D models tailored for academic and professional use.
+  Enhance your presentations, publications, and research visualizations with high-quality, ready-to-use assets.
+baseurl: "/Material_base" # <-- 重要：请根据你的GitHub仓库名调整。如果是 iamklufee.github.io，这里应是 ""
+url: "https://iamklufee.github.io" # <-- 重要：你的GitHub Pages域名部分
 
-title: Your awesome title
-email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "/Material_base" # the subpath of your site, e.g. /blog
-url: "https://iamklufee.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+# Collections for materials
+collections:
+  vectors:
+    output: true
+    permalink: /vectors/:title/
+  3d_models:
+    output: true
+    permalink: /3d_models/:title/
 
 # Build settings
-theme: minima
+markdown: kramdown
+theme: minima # 可以保留默认主题，但我们将通过自定义CSS覆盖其样式
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap # 推荐添加，用于生成站点地图
 
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+# Exclude files/folders from Jekyll build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .jekyll-cache
+  # 添加任何你不想部署到网站上的文件或文件夹

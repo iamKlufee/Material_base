@@ -1,35 +1,211 @@
-/* 自定义样式 */
+/* Import Google Fonts for a professional look */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Lato:wght@400;700&display=swap');
+
+/* General Body Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
+    font-family: 'Roboto', sans-serif; /* Primary font for body text */
+    line-height: 1.6;
+    color: #333; /* Dark gray for readability */
+    background-color: #f8f9fa; /* Light gray background, similar to scientific tools */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure footer sticks to bottom */
 }
 
-.hero {
-    padding: 80px 0;
-    color: #fff;
-    background: linear-gradient(45deg, #007bff, #6610f2); /* 渐变背景 */
-    border-radius: 8px;
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lato', sans-serif; /* Secondary font for headings */
+    font-weight: 700;
+    color: #212529; /* Darker color for headings */
+    margin-bottom: 0.5em;
 }
 
-.hero h2 {
+/* Links */
+a {
+    color: #007bff; /* Standard blue for links */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0056b3; /* Darker blue on hover */
+    text-decoration: underline;
+}
+
+/* Header Styles */
+.site-header {
+    background-color: #2c3e50; /* Deep blue/charcoal, similar to Zotero/Matlab nav */
+    color: #ffffff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.site-title a {
+    color: #ffffff;
+}
+
+.main-nav .nav-link {
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.main-nav .nav-link:hover {
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+/* Main Content Area */
+main {
+    flex: 1; /* Allows main content to grow and push footer down */
+    padding: 2rem 0;
+}
+
+.container {
+    max-width: 960px; /* Constrain content width for readability */
+    margin: 0 auto;
+    padding: 0 15px; /* Add horizontal padding */
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #007bff, #0056b3); /* Blue gradient */
+    color: #ffffff;
+    padding: 4rem 0;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-radius: 8px; /* Slightly rounded corners */
+}
+
+.hero-section h2 {
     font-size: 3rem;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
+    color: #ffffff;
 }
 
-.hero p {
+.hero-section p {
     font-size: 1.2rem;
-    margin-bottom: 30px;
+    margin-bottom: 2rem;
 }
 
-.card-img-top {
-    height: 200px;
-    object-fit: cover;
+/* Buttons (using Bootstrap's primary for consistency) */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+.btn-outline-light {
+    color: #ffffff;
+    border-color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-light:hover {
+    background-color: #ffffff;
+    color: #007bff;
+}
+
+/* Card Styles for Materials */
+.material-card {
+    border: none; /* Remove default card border */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Ensure rounded corners clip content */
+}
+
+.material-card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12); /* Enhanced shadow on hover */
+}
+
+.material-card .card-img-top {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 200px; /* Fixed height for image consistency */
+    object-fit: cover; /* Cover the area, cropping if necessary */
+}
+
+.material-card .card-body {
+    padding: 1.5rem;
+}
+
+.material-card .card-title {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+}
+
+.material-card .card-text {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+/* Footer Styles */
+.site-footer {
+    background-color: #34495e; /* Slightly darker than header */
+    color: #ecf0f1; /* Light gray text */
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.site-footer a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.site-footer a:hover {
+    color: #007bff;
+}
+
+/* AdSense Container (minimal styling) */
 .ads-container {
-    background-color: #e9ecef;
-    border: 1px dashed #ced4da;
+    background-color: #e9ecef; /* Light gray background for ads */
+    border: 1px solid #dee2e6; /* Subtle border */
+    border-radius: 5px;
+    padding: 1.5rem;
+    margin: 2rem auto;
+    text-align: center;
     color: #6c757d;
 }
 
-/* 更多样式根据需求添加 */
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .site-title {
+        font-size: 1.5rem;
+    }
+    .main-nav {
+        display: none; /* Hide nav on small screens, consider hamburger menu if needed */
+    }
+    .hero-section {
+        padding: 3rem 1rem;
+    }
+    .hero-section h2 {
+        font-size: 2.2rem;
+    }
+    .hero-section p {
+        font-size: 1rem;
+    }
+}

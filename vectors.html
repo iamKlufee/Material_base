@@ -1,19 +1,19 @@
 ---
 layout: default
-title: 矢量图
+title: Vector Graphics
 ---
 
-<h2 class="mb-4 text-center">所有矢量图</h2>
+<h2 class="mb-4 text-center">All Vector Graphics</h2>
 
 <div class="row row-cols-1 row-cols-md-3 g-4">
     {% for vector in site.vectors %}
     <div class="col">
-        <div class="card h-100 shadow-sm">
+        <div class="card material-card h-100">
             <img src="{{ vector.thumbnail | relative_url }}" class="card-img-top" alt="{{ vector.title }}">
             <div class="card-body">
                 <h5 class="card-title"><a href="{{ vector.url | relative_url }}">{{ vector.title }}</a></h5>
                 <p class="card-text">{{ vector.description | truncate: 100 }}</p>
-                <a href="{{ vector.download_link | relative_url }}" class="btn btn-success btn-sm">免费下载</a>
+                <a href="{{ vector.download_link | relative_url }}" class="btn btn-primary btn-sm mt-auto">Download</a>
             </div>
         </div>
     </div>
