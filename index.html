@@ -1,0 +1,45 @@
+---
+layout: default
+title: 首页
+---
+
+<section class="hero text-center mb-5">
+    <h2>免费下载高质量矢量图和3D模型</h2>
+    <p class="lead">发现无限创意，立即下载你需要的素材。</p>
+    <div class="d-grid gap-2 d-md-flex justify-content-center">
+        <a href="{{ '/vectors/' | relative_url }}" class="btn btn-primary btn-lg">探索矢量图</a>
+        <a href="{{ '/3d_models/' | relative_url }}" class="btn btn-outline-light btn-lg">探索3D模型</a>
+    </div>
+</section>
+
+{% include google_adsense.html %} {# 引用 AdSense 广告位 #}
+
+<section class="latest-materials mb-5">
+    <h3 class="mb-4 text-center">最新上传</h3>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {% for vector in site.vectors limit:3 %}
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <img src="{{ vector.thumbnail | relative_url }}" class="card-img-top" alt="{{ vector.title }}">
+                <div class="card-body">
+                    <h5 class="card-title"><a href="{{ vector.url | relative_url }}">{{ vector.title }}</a></h5>
+                    <p class="card-text">{{ vector.description | truncate: 100 }}</p>
+                    <a href="{{ vector.download_link | relative_url }}" class="btn btn-success btn-sm">免费下载</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        {% for model in site.3d_models limit:3 %}
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <img src="{{ model.thumbnail | relative_url }}" class="card-img-top" alt="{{ model.title }}">
+                <div class="card-body">
+                    <h5 class="card-title"><a href="{{ model.url | relative_url }}">{{ model.title }}</a></h5>
+                    <p class="card-text">{{ model.description | truncate: 100 }}</p>
+                    <a href="{{ model.download_link | relative_url }}" class="btn btn-success btn-sm">免费下载</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>

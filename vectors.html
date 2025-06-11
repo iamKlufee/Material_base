@@ -1,0 +1,23 @@
+---
+layout: default
+title: 矢量图
+---
+
+<h2 class="mb-4 text-center">所有矢量图</h2>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for vector in site.vectors %}
+    <div class="col">
+        <div class="card h-100 shadow-sm">
+            <img src="{{ vector.thumbnail | relative_url }}" class="card-img-top" alt="{{ vector.title }}">
+            <div class="card-body">
+                <h5 class="card-title"><a href="{{ vector.url | relative_url }}">{{ vector.title }}</a></h5>
+                <p class="card-text">{{ vector.description | truncate: 100 }}</p>
+                <a href="{{ vector.download_link | relative_url }}" class="btn btn-success btn-sm">免费下载</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% include google_adsense.html %}
