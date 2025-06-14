@@ -18,4 +18,3 @@ description: 高质量抽象几何背景矢量图，适用于海报、网页设�
 ### 下载链接
 <a href="{{ page.download_link | relative_url }}" class="btn btn-primary btn-lg mt-3">立即下载 (ZIP)</a>
 
-{% include google_adsense.html %}
