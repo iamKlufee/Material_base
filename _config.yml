@@ -4,8 +4,8 @@ email: your-email@example.com # 你的联系邮箱
 description: >- # 网站描述，更专业化
   A curated collection of free vector graphics tailored for academic and professional use.
   Enhance your presentations, publications, and research visualizations with high-quality, ready-to-use assets.
-baseurl: "" # <-- 将这里改为空字符串！
-url: "https://iamklufee.github.io" # <-- 保持不变
+baseurl: "/Material_base"
+url: "https://iamklufee.github.io"
 
 # Collections for materials
 collections:
