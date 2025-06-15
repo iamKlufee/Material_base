@@ -1,6 +1,6 @@
 ---
 ---
-{@import "minima"; /* <-- 这一行应该紧跟在第二个 --- 之后，没有空行间隔 */
+@import "minima";
 
 /* --- 自定义缩略图样式 --- */
 .card-img-top {
@@ -10,5 +10,5 @@
     display: block;
     margin: 0 auto 10px auto;
 }
-}
-/* 你的其他自定义 CSS 规则也写在这里 */
+
+/* 如果有其他自定义样式，请添加到这里 */
