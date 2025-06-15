@@ -1,0 +1,14 @@
+---
+---
+{@import "minima"; /* <-- 这一行应该紧跟在第二个 --- 之后，没有空行间隔 */
+
+/* --- 自定义缩略图样式 --- */
+.card-img-top {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 10px auto;
+}
+}
+/* 你的其他自定义 CSS 规则也写在这里 */
